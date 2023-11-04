@@ -28,21 +28,19 @@
       <div class="col-5 offset-1">
         <h2>Информация</h2>
 
-
         {% for info in all_info %}
-        <div class="alert alert-danger">
-          <div class="row">
-            <div class="col-9">
-              <b>Город:</b> {{ info.city }} <br>
-              <b>Температура:</b> {{ info.temp }}°C<br>
-            </div>
-            <div class="offset-1 col-2">
-              <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды" class="img-thumbnail">
+          <div class="alert alert-danger">
+            <div class="row">
+              <div class="col-9">
+                <b>Город:</b> {{ info.city }} <br>
+                <b>Температура:</b> {{ info.temp }}°C<br>
+              </div>
+              <div class="offset-1 col-2">
+                <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды" class="img-thumbnail">
+              </div>
             </div>
           </div>
-        </div>
-      {% endfor %}
-
+        {% endfor %}
 
       </div>
     </div>

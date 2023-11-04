@@ -12,9 +12,17 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+from dotenv import load_dotenv
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+DOTENV_PATH = os.path.join(BASE_DIR, '.env')
+
+if os.path.exists(DOTENV_PATH):
+    load_dotenv(DOTENV_PATH)
+
+APPID = os.environ.get('APPID') 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -25,7 +33,7 @@ SECRET_KEY = 'u-ki7(91&xh&mpri--&i@_nz*^_$zjs&u)^e137b8j-3l85o#5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition

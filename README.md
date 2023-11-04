@@ -1,2 +1,4 @@
 # Weather_Application
-Weather_Application - my first web-site on Python Django
+Weather_Application is my first website on Python Django
+
+It provides real-time weather information
